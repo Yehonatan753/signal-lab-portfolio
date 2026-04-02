@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-white/5 py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Signal Lab" className="size-7 rounded-md" />
+          <img src="/logo.jpg" alt="Signal Lab" className="size-7 rounded-md" />
           <span className="font-heading font-black text-white">
             Signal <span className="text-signal">Lab</span>
           </span>

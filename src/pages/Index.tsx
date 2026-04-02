@@ -54,7 +54,7 @@ export default function Index() {
               transition={{ duration: 2, repeat: Infinity }}
               className="size-20 rounded-2xl bg-[#1a2535] flex items-center justify-center"
             >
-              <img src="/logo.svg" alt="Signal Lab" className="size-14" />
+              <img src="/logo.jpg" alt="Signal Lab" className="size-14 rounded-xl" />
             </motion.div>
             <p className="font-heading font-black text-white text-2xl tracking-tight">
               Signal <span className="text-signal">Lab</span>
