@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://signal-lab.vercel.app/sitemap.xml

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 225 35% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 225 35% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 225 25% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 225 25% 10%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 225 25% 10%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 195 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --bg: 222 47% 3%;
+    --surface: 225 35% 6%;
+    --surface-hover: 225 25% 10%;
+    --signal: 195 100% 50%;
+    --signal-light: 195 100% 65%;
+    --violet: 265 55% 60%;
+    --text-main: 0 0% 98%;
+    --text-muted: 220 10% 55%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: 'Inter', 'Assistant', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', 'Heebo', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--bg));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--signal)), hsl(265, 55%, 45%));
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, hsl(var(--signal-light)), hsl(var(--signal)));
+  }
+}
+
+/* ── Noise overlay ── */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── Glass panels ── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-dark {
+  background: rgba(10, 12, 25, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Glow blob ── */
+.glow-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: hsl(var(--signal));
+  filter: blur(130px);
+  border-radius: 50%;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-blob-violet {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: hsl(var(--violet));
+  filter: blur(130px);
+  border-radius: 50%;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Magnetic button ── */
+.btn-magnetic {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+/* ── Gradient text shimmer ── */
+.text-glow-animate {
+  background: linear-gradient(
+    to right,
+    #ffffff 20%,
+    hsl(195, 100%, 50%) 40%,
+    hsl(265, 55%, 65%) 60%,
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+/* ── Signal wave decoration ── */
+.signal-wave {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw-wave 3s ease forwards;
+}
+
+@keyframes draw-wave {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Rotating gradient border ── */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.animated-border-card {
+  background: conic-gradient(from var(--angle), transparent 60%, hsl(195, 100%, 50%) 80%, transparent 100%);
+  animation: rotateBorder 4s linear infinite;
+  border-radius: 1.5rem;
+  padding: 1px;
+}
+
+@keyframes rotateBorder {
+  to { --angle: 360deg; }
+}
