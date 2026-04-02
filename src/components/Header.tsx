@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { SITE_DATA } from '../data';
 import { useLeadPopup } from './LeadCapturePopup';
 
@@ -47,9 +47,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group z-50">
-            <div className="size-8 rounded-lg bg-signal flex items-center justify-center shadow-[0_0_20px_rgba(0,180,255,0.4)] group-hover:shadow-[0_0_30px_rgba(0,180,255,0.6)] transition-shadow">
-              <Zap size={16} className="fill-white text-white" />
-            </div>
+            <img src="/logo.svg" alt="Signal Lab" className="size-8 rounded-lg shadow-[0_0_20px_rgba(0,180,255,0.4)] group-hover:shadow-[0_0_30px_rgba(0,180,255,0.6)] transition-shadow" />
             <span className="font-heading font-black text-white text-lg tracking-tight">
               Signal <span className="text-signal">Lab</span>
             </span>

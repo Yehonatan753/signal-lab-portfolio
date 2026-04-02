@@ -1,4 +1,3 @@
-import { Zap } from 'lucide-react';
 import { SITE_DATA } from '../data';
 
 export default function Footer() {
@@ -6,9 +5,7 @@ export default function Footer() {
     <footer className="border-t border-white/5 py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <div className="size-7 rounded-md bg-signal flex items-center justify-center">
-            <Zap size={13} className="fill-white text-white" />
-          </div>
+          <img src="/logo.svg" alt="Signal Lab" className="size-7 rounded-md" />
           <span className="font-heading font-black text-white">
             Signal <span className="text-signal">Lab</span>
           </span>

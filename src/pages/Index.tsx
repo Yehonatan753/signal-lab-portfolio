@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap } from 'lucide-react';
 
 import NoiseOverlay from '../components/NoiseOverlay';
 import LeadCapturePopup from '../components/LeadCapturePopup';
@@ -53,9 +52,9 @@ export default function Index() {
             <motion.div
               animate={{ boxShadow: ['0 0 40px rgba(0,180,255,0.4)', '0 0 80px rgba(0,180,255,0.7)', '0 0 40px rgba(0,180,255,0.4)'] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="size-20 rounded-2xl bg-signal flex items-center justify-center"
+              className="size-20 rounded-2xl bg-[#1a2535] flex items-center justify-center"
             >
-              <Zap size={36} className="fill-white text-white" />
+              <img src="/logo.svg" alt="Signal Lab" className="size-14" />
             </motion.div>
             <p className="font-heading font-black text-white text-2xl tracking-tight">
               Signal <span className="text-signal">Lab</span>
