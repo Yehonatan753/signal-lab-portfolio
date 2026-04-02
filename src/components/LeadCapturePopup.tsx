@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2, Zap, ArrowRight } from 'lucide-react';
 import { SITE_DATA } from '../data';
+import { supabase } from '../lib/supabase';
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 const lm = SITE_DATA.leadMagnet;
@@ -59,26 +60,30 @@ export default function LeadCapturePopup() {
     setDismissed(true);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setState('submitting');
 
-    // Build mailto body
-    const body = [
-      `Name: ${form.name}`,
-      `Email: ${form.email}`,
-      form.business ? `Business: ${form.business}` : '',
-      '',
-      'Please send me my Free AI Growth Audit.',
-    ].filter(Boolean).join('\n');
+    try {
+      const { error } = await supabase.from('leads').insert({
+        name: form.name,
+        email: form.email,
+        business: form.business || null,
+      });
 
-    const mailto = `mailto:${SITE_DATA.personal.email}?subject=${encodeURIComponent(SITE_DATA.personal.emailSubject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-
-    // Show success after short delay (email client should open)
-    setTimeout(() => {
+      if (error) throw error;
       setState('success');
-    }, 800);
+    } catch {
+      // Fallback to mailto if Supabase fails
+      const body = [
+        `Name: ${form.name}`,
+        `Email: ${form.email}`,
+        form.business ? `Business: ${form.business}` : '',
+      ].filter(Boolean).join('\n');
+      const mailto = `mailto:${SITE_DATA.personal.email}?subject=${encodeURIComponent(SITE_DATA.personal.emailSubject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      setState('success');
+    }
   }
 
   return (
