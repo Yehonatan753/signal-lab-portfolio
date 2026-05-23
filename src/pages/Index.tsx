@@ -14,6 +14,7 @@ import Showcase from '../components/Showcase';
 import ProofLedger from '../components/ProofLedger';
 import CaseStudy from '../components/CaseStudy';
 import RonCaseStudy from '../components/RonCaseStudy';
+import CaseStudyLibrary from '../components/CaseStudyLibrary';
 import Testimonials from '../components/Testimonials';
 import AuditCta from '../components/AuditCta';
 import Process from '../components/Process';
@@ -88,6 +89,7 @@ export default function Index() {
           <ProofLedger />
           <CaseStudy />
           <RonCaseStudy />
+          <CaseStudyLibrary />
           <Testimonials />
           <AuditCta />
           <Process />
