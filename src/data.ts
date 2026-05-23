@@ -10,6 +10,7 @@ export const SITE_DATA = {
   personal: {
     name: 'Yehonatan',
     brand: 'Signal Lab',
+    site: 'https://signal-lab-ops.com/',
     email: 'jonathan@signal-lab-ops.com',
     emailSubject: 'I want a Free AI Audit - Signal Lab',
     instagram: 'https://www.instagram.com/signal.lab_/',
@@ -24,10 +25,10 @@ export const SITE_DATA = {
       { name: 'Home',     href: '#hero' },
       { name: 'Work',     href: '#showcase' },
       { name: 'Services', href: '#services' },
-      { name: 'Results',  href: '#testimonials' },
+      { name: 'Results',  href: '#proof-ledger' },
       { name: 'Process',  href: '#process' },
     ],
-    cta: 'Book a Call',
+    cta: 'Free AI Audit',
   },
 
   hero: {
@@ -35,9 +36,9 @@ export const SITE_DATA = {
     eyebrow: 'Signal Lab',
     headline1: 'We turn AI',
     headline2: 'into revenue.',
-    sub: "We build practical business systems: websites, apps, AI agents, automations, dashboards, internal tools, and lead systems that reduce manual work and turn demand into pipeline.",
+    sub: "We inspect where leads, hours, or money are leaking, then build the right system: website, app, AI agent, automation, dashboard, internal tool, or follow-up engine.",
     stats: [
-      { num: 2000,  suffix: '+', label: 'Lead records mapped' },
+      { num: 16,    suffix: '%', label: 'Dormant-lead recovery target' },
       { num: 5000,  suffix: '+', label: 'SKUs structured' },
       { num: 1000,  suffix: '+', label: 'Audience built' },
     ],
@@ -53,12 +54,12 @@ export const SITE_DATA = {
 
   painPoint: {
     headline: "You're leaving money on the table.",
-    sub: 'Every day without the right systems is revenue your competitors are capturing instead.',
+    sub: 'Most businesses do not need another tool. They need the first leak found, priced, and fixed.',
     pains: [
-      { icon: Clock,      text: 'Hours wasted on manual tasks that AI could handle in seconds' },
-      { icon: Users,      text: 'Leads going cold because there is no automated follow-up system' },
-      { icon: TrendingUp, text: 'Website that looks like a business card, not a sales machine' },
-      { icon: DollarSign, text: 'Missing payments because there is no 24/7 checkout flow' },
+      { icon: Clock,      text: '6-11 hours a week lost to admin, copy-paste, manual follow-up, and repeated updates' },
+      { icon: Users,      text: '8-13 warm leads a month going cold because nobody catches them fast enough' },
+      { icon: TrendingUp, text: 'A website that explains the business, but does not create qualified next steps' },
+      { icon: DollarSign, text: 'Revenue stuck in old lead lists, unclear checkout flows, missed reminders, or weak intake' },
     ],
   },
 
@@ -66,12 +67,12 @@ export const SITE_DATA = {
     {
       id: 'tomer-site',
       title: 'Tomer Friedman',
-      type: 'Sales Website',
-      desc: 'Sales website, quiz funnel, WhatsApp routing, and lead recovery infrastructure for 2,000+ dormant records.',
+      type: 'Sales System',
+      desc: 'Sales website, quiz funnel, WhatsApp routing, app direction, and reactivation logic for 2,000+ dormant lead records.',
       stack: ['React', 'Vite', 'Tailwind', 'Framer Motion'],
       url: 'https://tf-nutritionist.com',
-      metric: '12',
-      metricLabel: 'sections wired to action',
+      metric: '16%',
+      metricLabel: 'reactivation target',
       accentHex: '#ff6b35',
       theme: 'energy' as const,
     },
@@ -88,14 +89,50 @@ export const SITE_DATA = {
       theme: 'health' as const,
     },
     {
-      id: 'ron-ecom',
-      title: "Ron's Store",
-      type: 'E-Commerce Platform',
-      desc: '5,000+ SKU catalog system with filtering, search, checkout flow, and admin workflows that cut repeated catalog work.',
-      stack: ['React', 'Node.js', 'Stripe', 'PostgreSQL'],
+      id: 'hahai-vehatzomeach',
+      title: 'Hahai VeHatzomeach',
+      type: 'Hebrew RTL Website',
+      desc: 'Hebrew-first business site with mobile-first structure, service clarity, catalog/contact paths, and practical local-business conversion flow.',
+      stack: ['React', 'RTL UX', 'Lead Flow', 'Mobile'],
       url: null,
-      metric: '5,000+',
-      metricLabel: 'live products',
+      metric: 'RTL',
+      metricLabel: 'local-business flow',
+      accentHex: '#22c55e',
+      theme: 'ecom' as const,
+    },
+    {
+      id: 'shova-accounting',
+      title: 'Shova Ben Haim Systems',
+      type: 'Accounting Office Tools',
+      desc: 'Workflow and product systems for accounting firms: intake, document tracking, recurring tasks, client handoff, and operational dashboards.',
+      stack: ['Workflow Design', 'CRM', 'Dashboards', 'AI Agents'],
+      url: null,
+      metric: '4-9h',
+      metricLabel: 'weekly admin target',
+      accentHex: '#f97316',
+      theme: 'energy' as const,
+    },
+    {
+      id: 'agency-ai-agents',
+      title: 'Agency AI Agent Builds',
+      type: 'AI Agent Systems',
+      desc: 'Built and specified AI assistant workflows inside a larger AI-focused agency environment for business-owner operations and repetitive questions.',
+      stack: ['OpenAI', 'n8n', 'Make', 'Workflow QA'],
+      url: null,
+      metric: 'AI',
+      metricLabel: 'agent workflow layer',
+      accentHex: '#8b5cf6',
+      theme: 'health' as const,
+    },
+    {
+      id: 'brand-engine',
+      title: 'Personal Brand Engine',
+      type: 'Audience System',
+      desc: 'Built a content and positioning engine that passed 1K+ followers with hooks, packaging, production rhythm, and feedback from real views and likes.',
+      stack: ['Content Ops', 'Positioning', 'Analytics', 'AI Research'],
+      url: 'https://www.instagram.com/signal.lab_/',
+      metric: '1K+',
+      metricLabel: 'followers built',
       accentHex: '#00b4ff',
       theme: 'ecom' as const,
     },
@@ -103,8 +140,8 @@ export const SITE_DATA = {
 
   capabilities: {
     label: 'What we build',
-    headline: 'Every weapon in the arsenal.',
-    sub: "We don't specialize in one thing. We build the whole system.",
+    headline: 'The build depends on the leak.',
+    sub: "We are not limited to one offer. The recommendation changes by what gets you away from pain and closer to revenue fastest.",
     items: [
       'AI Agents & Custom Bots', 'Sales Funnels & Websites',
       'Mobile Apps (iOS + Android)', 'Email Automation Systems',
@@ -129,7 +166,7 @@ export const SITE_DATA = {
       icon: Globe,
       color: 'violet' as const,
       title: 'Sales Websites & Funnels',
-      desc: 'Fast websites and funnels that explain the offer clearly, capture demand, route leads, and give the business a system instead of a brochure.',
+      desc: 'Websites and funnels that explain the offer, make the next step obvious, and route qualified demand instead of acting like a static brochure.',
       tags: ['React', 'Vite', 'Tailwind', 'Framer'],
     },
     {
@@ -150,7 +187,7 @@ export const SITE_DATA = {
       icon: Mail,
       color: 'signal' as const,
       title: 'Email & Lead Systems',
-      desc: 'Reactivate dormant lists, segment leads, build follow-up paths, and turn old demand into a cleaner call pipeline.',
+      desc: 'Reactivate dormant lists, segment leads, build follow-up paths, and turn old demand into a cleaner audit, call, or checkout pipeline.',
       tags: ['Sequences', 'Segmentation', 'CRM'],
     },
     {
@@ -164,10 +201,10 @@ export const SITE_DATA = {
 
   caseStudies: {
     tomer: {
-      label: 'Case Study — Nutrition & Health',
+      label: 'Case Study - Nutrition & Health',
       client: 'Tomer Friedman',
-      clientTitle: 'Nutritionist & Fitness Coach · 22 years experience',
-      summary: "Tomer had a site that did not explain the offer clearly, 2,000+ dormant lead records, and manual follow-up that was too easy to lose. We rebuilt the system around lead capture, WhatsApp routing, reactivation, and a cleaner sales path.",
+      clientTitle: 'Nutritionist & Fitness Coach - 22 years experience',
+      summary: "Tomer had a site that did not explain the offer clearly, 2,000+ dormant lead records, and manual follow-up that was too easy to lose. We rebuilt the system around lead capture, WhatsApp routing, app direction, reactivation, and a cleaner sales path.",
       deliverables: [
         'Full React sales website with 12 sections, VSL, courses, quiz funnel, and 5 WhatsApp lead forms',
         'Mobile tracker app direction with AI food recognition, client logging, and coach-ready data',
@@ -206,9 +243,9 @@ export const SITE_DATA = {
     },
 
     ron: {
-      label: 'Case Study — E-Commerce',
+      label: 'Case Study - E-Commerce',
       client: "Ron's Store",
-      clientTitle: 'E-Commerce · 5,000+ Products',
+      clientTitle: 'E-Commerce - 5,000+ Products',
       summary: "Ron needed a custom e-commerce platform that could handle a large catalog without turning every update into manual admin work. We built the structure for search, filtering, checkout, and back-office control.",
       deliverables: [
         'Custom React storefront with real-time search and advanced multi-filter system',
@@ -251,16 +288,16 @@ export const SITE_DATA = {
   proofLedger: {
     label: 'Proof Ledger',
     headline: 'Concrete systems, not AI theater.',
-    sub: 'The common pattern: find the bottleneck, build the smallest useful system, and connect it to money, time saved, or operational clarity.',
+    sub: 'Every item below ties the build to a business outcome: recovered demand, saved hours, clearer intake, faster handoff, or a cleaner path to revenue.',
     cards: [
       {
         icon: Mail,
         color: 'signal' as const,
         title: 'Dormant Lead Recovery',
         stat: '2,000+',
-        statLabel: 'lead records mapped',
-        body: 'Built segmentation, follow-up logic, and WhatsApp routing for a business with dormant demand sitting unused.',
-        outcome: 'Goal: recover 10-16% of realistic opportunity pools instead of letting old leads disappear.',
+        statLabel: 'records audited',
+        body: 'Mapped an old lead pool, split it by intent, and designed a 5-7 touch recovery path with WhatsApp handoff and owner-visible follow-up.',
+        outcome: 'Target: recover 10-16% of dormant opportunities. At normal service-business ticket sizes, that is real cash from demand that already existed.',
       },
       {
         icon: Package,
@@ -268,8 +305,8 @@ export const SITE_DATA = {
         title: 'Large Catalog Systems',
         stat: '5,000+',
         statLabel: 'SKUs structured',
-        body: 'Created a catalog/admin structure for search, filtering, inventory, checkout, and repeatable product handling.',
-        outcome: 'Cuts repeated admin work and gives the owner a platform they can operate without SaaS limitations.',
+        body: 'Structured catalog, search, filtering, checkout, and admin workflows so a large product base is not managed one item at a time.',
+        outcome: 'Cuts repeated catalog work, keeps checkout open 24/7, and gives the owner a platform they can actually operate.',
       },
       {
         icon: Globe,
@@ -277,17 +314,17 @@ export const SITE_DATA = {
         title: 'Hebrew RTL Business Site',
         stat: 'RTL',
         statLabel: 'site + contact flow',
-        body: 'Built Hebrew-first site structure for a real local business, including service clarity, catalog/contact paths, and mobile-first layout.',
-        outcome: 'Makes the business easier to understand, trust, and contact from the first visit.',
+        body: 'Built a Hebrew-first local-business site with mobile layout, clear service/catalog paths, and contact flow for people who are ready to act.',
+        outcome: 'Reduces confusion on the first visit and makes it easier for a real customer to understand, trust, and contact the business.',
       },
       {
         icon: FileText,
         color: 'pink' as const,
         title: 'Accounting Office Systems',
-        stat: 'Ops',
-        statLabel: 'office workflow layer',
-        body: 'Mapped practical systems for accountant-office workflows: intake, recurring tasks, document tracking, approvals, and client handoff.',
-        outcome: 'Targets fewer missed tasks, cleaner follow-up, and less manual chasing inside service offices.',
+        stat: '4-9h',
+        statLabel: 'weekly admin target',
+        body: 'For accounting-office products, mapped systems for intake, recurring tasks, document tracking, approvals, reminders, and client handoff.',
+        outcome: 'The win is simple: fewer missed tasks, less chasing, and more owner time recovered every week.',
       },
       {
         icon: Megaphone,
@@ -296,7 +333,7 @@ export const SITE_DATA = {
         stat: '1K+',
         statLabel: 'followers built',
         body: 'Built content systems around positioning, hooks, packaging, research, production rhythm, and feedback loops from real views and likes.',
-        outcome: 'Turns posting into a measurable audience-building system instead of random content.',
+        outcome: 'Turns posting into a measurable audience-building system instead of random content guesses.',
       },
       {
         icon: Workflow,
@@ -304,8 +341,8 @@ export const SITE_DATA = {
         title: 'Agency AI Agent Builds',
         stat: 'AI',
         statLabel: 'agent workflows',
-        body: 'Scoped and built AI assistant workflows for business owners inside a larger AI-focused agency environment.',
-        outcome: 'Moves teams away from repeated manual work toward documented, testable AI-assisted workflows.',
+        body: 'Scoped, specified, and built AI assistant workflows for business owners inside a larger AI-focused agency environment.',
+        outcome: 'Moves teams from repeated manual questions and copy-paste work into documented, testable AI-assisted workflows.',
       },
       {
         icon: ShieldCheck,
@@ -313,7 +350,7 @@ export const SITE_DATA = {
         title: 'Defense Organization AI Systems',
         stat: 'Live',
         statLabel: 'sensitive environment',
-        body: 'Currently implementing modern AI systems inside a sensitive defense organization. Details stay confidential by design.',
+        body: 'Currently implementing modern AI systems inside a sensitive organization. Details stay confidential by design.',
         outcome: 'Focus: reliable workflows, operational clarity, and practical AI adoption where mistakes are expensive.',
       },
       {
@@ -323,7 +360,7 @@ export const SITE_DATA = {
         stat: 'Full',
         statLabel: 'web/app/system stack',
         body: 'Signal Lab is not limited to one tool. We build websites, apps, automations, bots, dashboards, internal tools, and the glue between them.',
-        outcome: 'The recommendation changes by business: whatever gets the owner away from pain and closer to the desired outcome fastest.',
+        outcome: 'We choose the build by business logic: what removes the biggest pain and moves the owner toward the desired result fastest.',
       },
     ],
   },
@@ -331,10 +368,10 @@ export const SITE_DATA = {
   testimonials: [
     {
       name: 'Tomer Friedman',
-      role: 'Nutritionist & Coach · tf-nutritionist.com',
+      role: 'Nutritionist & Coach - tf-nutritionist.com',
       initials: 'TF',
       color: 'signal' as const,
-      text: 'Yehonatan built my website, app, and entire marketing system from scratch. Unlike other agencies, he actually understands business. He is not just a contractor — he is a partner who delivers real results. He built in weeks what would have taken agencies months.',
+      text: 'Yehonatan built my website, app, and marketing system from scratch. He understands both the business and the build, and he moved in weeks on work that usually gets dragged out for months.',
     },
     {
       name: 'Ron',
@@ -346,38 +383,38 @@ export const SITE_DATA = {
   ],
 
   process: [
-    { num: '01', title: 'Discovery Call', desc: "Free call. We understand your business, what exists, what is missing, and what will bring results fastest." },
-    { num: '02', title: 'The Plan',       desc: 'We define exactly what to build, in what order, and what gets you ROI first. No vague proposals.' },
-    { num: '03', title: 'We Build',       desc: 'Code, systems, automations. Fully transparent — you see progress at every step. We move fast.' },
-    { num: '04', title: 'Results',        desc: "Deploy, measure, optimize. We do not disappear after launch. We track the numbers with you." },
+    { num: '01', title: 'Free Audit',      desc: "We inspect your offer, workflow, leads, site, and follow-up path. The goal is to find the first leak worth fixing." },
+    { num: '02', title: 'Money Map',       desc: 'We price the leak in hours, missed leads, or revenue, then define what should be built first and why.' },
+    { num: '03', title: 'Build Sprint',    desc: 'Website, app, agent, automation, dashboard, or internal tool. You see the work while it is being built.' },
+    { num: '04', title: 'Track Results',   desc: "Deploy, measure, optimize. We keep the work connected to saved time, recovered leads, or cleaner operations." },
   ],
 
   cta: {
     headline: 'Ready to build a system that gets you clients?',
-    sub: 'First conversation is free. No commitment. No long contracts.',
+    sub: 'Get a practical audit of the first leak we would fix, what it costs you, and what we would build to remove it.',
     primary: 'Get My Free AI Audit',
     secondary: 'Follow @signal.lab_',
   },
 
   leadMagnet: {
     // Popup + inline CTA
-    badge: 'FREE · Limited Spots',
+    badge: 'FREE - Limited Spots',
     headline: 'Get Your Free AI Growth Audit',
     subheadline: "Here's exactly what you get:",
     bullets: [
-      'A breakdown of which AI systems would 10x your revenue',
-      'The #1 bottleneck killing your growth right now',
-      'A prioritized roadmap — what to build first and why',
+      'The first system we would build for your specific business',
+      'The bottleneck costing you leads, hours, or revenue right now',
+      'A prioritized roadmap: what to build first and why',
       'Honest assessment: what we would build if this were our business',
     ],
-    why: "Most agencies pitch you a package before they understand your business. We do the homework first — so you get a real plan, not a sales deck.",
+    why: "Most agencies pitch you a package before they understand your business. We do the homework first, so you get a real plan, not a sales deck.",
     ctaLabel: 'Send Me the Free Audit',
     namePlaceholder: 'Your name',
     emailPlaceholder: 'your@email.com',
     businessPlaceholder: 'Your website or business (optional)',
     disclaimer: 'Delivered to your inbox within 48h. Zero spam. Zero pitch.',
     successTitle: 'You are in.',
-    successSub: 'Check your inbox in the next 48 hours. We will send you a personalized breakdown — built specifically for your business.',
+    successSub: 'Check your inbox in the next 48 hours. We will send you a personalized breakdown built specifically for your business.',
     // Popup triggers
     scrollTrigger: 55,   // % scroll depth
     exitIntent: true,

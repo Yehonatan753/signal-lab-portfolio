@@ -47,11 +47,11 @@ export default function Services() {
           <p className="text-xs font-bold tracking-[3px] uppercase text-signal mb-4">What We Build</p>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5">
             <h2 className="text-5xl md:text-6xl font-heading font-black text-white leading-[1.1] tracking-tighter max-w-xl">
-              Six weapons.<br />
-              <span className="text-glow-animate">One agency.</span>
+              One bottleneck.<br />
+              <span className="text-glow-animate">The right build.</span>
             </h2>
             <p className="text-lg text-text-muted max-w-md leading-relaxed">
-              We don't offer one service. We build complete revenue systems — every component working together.
+              We do not force one package. We choose the build by the leak: lead flow, admin hours, sales clarity, checkout, or operations.
             </p>
           </div>
         </motion.div>

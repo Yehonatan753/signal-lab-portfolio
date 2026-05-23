@@ -45,11 +45,11 @@ export default function CaseStudy() {
           className="animated-border-card mb-6"
         >
           <div className="glass-panel-dark rounded-3xl p-8 md:p-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Left — client info */}
+            {/* Left - client info */}
             <div>
               <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[2px] uppercase text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-full mb-6">
                 <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                Real Client · Real Results
+                Real Client - Real Results
               </span>
               <h3 className="text-3xl md:text-4xl font-heading font-black text-white mb-1">{cs.client}</h3>
               <p className="text-text-muted text-sm mb-8">{cs.clientTitle}</p>
@@ -63,7 +63,7 @@ export default function CaseStudy() {
               </ul>
             </div>
 
-            {/* Right — metrics */}
+            {/* Right - metrics */}
             <div className="grid grid-cols-2 gap-4">
               {cs.metrics.map((m, i) => (
                 <div key={i} className="glass-panel rounded-2xl p-6 text-center border border-white/5">
@@ -113,7 +113,7 @@ export default function CaseStudy() {
           <div className="glass-panel rounded-2xl p-7 border border-white/5">
             <div className="flex items-center gap-2.5 mb-6">
               <span className="size-2.5 rounded-full bg-red-500" />
-              <span className="text-xs font-bold tracking-[2px] uppercase text-red-400">Before — Business Card</span>
+              <span className="text-xs font-bold tracking-[2px] uppercase text-red-400">Before - Business Card</span>
             </div>
             <ul className="flex flex-col gap-3">
               {cs.before.map((b, i) => (
@@ -129,7 +129,7 @@ export default function CaseStudy() {
           <div className="glass-panel rounded-2xl p-7 border border-emerald-500/20">
             <div className="flex items-center gap-2.5 mb-6">
               <span className="size-2.5 rounded-full bg-emerald-400" />
-              <span className="text-xs font-bold tracking-[2px] uppercase text-emerald-400">After — Sales Machine</span>
+              <span className="text-xs font-bold tracking-[2px] uppercase text-emerald-400">After - Sales Machine</span>
             </div>
             <ul className="flex flex-col gap-3">
               {cs.after.map((a, i) => (

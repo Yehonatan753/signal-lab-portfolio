@@ -12,10 +12,18 @@ export default function Footer() {
         </div>
 
         <p className="text-text-muted text-sm text-center">
-          © 2026 Signal Lab. All rights reserved.
+          Copyright 2026 Signal Lab. All rights reserved.
         </p>
 
         <div className="flex items-center gap-5">
+          <a
+            href={SITE_DATA.personal.site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-text-muted hover:text-signal transition-colors font-medium"
+          >
+            signal-lab-ops.com
+          </a>
           <a
             href={SITE_DATA.personal.instagram}
             target="_blank"

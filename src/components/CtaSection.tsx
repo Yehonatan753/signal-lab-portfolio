@@ -82,7 +82,7 @@ export default function CtaSection() {
             </div>
 
             <p className="text-xs text-text-muted mt-8 relative">
-              No commitment · Free first call · Worldwide
+              Free audit - no commitment - worldwide
             </p>
           </div>
         </motion.div>
