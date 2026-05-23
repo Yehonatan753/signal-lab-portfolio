@@ -15,7 +15,7 @@ export default function Capabilities() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left — copy */}
+          {/* Left - copy */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -35,11 +35,11 @@ export default function Capabilities() {
               onClick={openPopup}
               className="btn-magnetic inline-flex items-center gap-3 bg-signal text-white px-7 py-3.5 rounded-full font-bold shadow-[0_10px_40px_rgba(0,180,255,0.35)] hover:shadow-[0_10px_50px_rgba(0,180,255,0.5)] transition-shadow"
             >
-              {"Let's scope your project →"}
+              {"Get a free audit ->"}
             </button>
           </motion.div>
 
-          {/* Right — capabilities grid */}
+          {/* Right - capabilities grid */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

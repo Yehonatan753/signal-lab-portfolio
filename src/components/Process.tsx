@@ -28,7 +28,7 @@ export default function Process() {
         >
           <p className="text-xs font-bold tracking-[3px] uppercase text-signal mb-4">How It Works</p>
           <h2 className="text-5xl md:text-6xl font-heading font-black text-white leading-[1.1] tracking-tighter">
-            From idea to results —<br />
+            From leak to system<br />
             <span className="text-glow-animate">4 steps.</span>
           </h2>
         </motion.div>

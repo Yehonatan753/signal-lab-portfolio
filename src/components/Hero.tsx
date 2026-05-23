@@ -158,7 +158,7 @@ export default function Hero() {
               onClick={openPopup}
               className="btn-magnetic group w-full sm:w-auto bg-signal text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_10px_40px_rgba(0,180,255,0.4)] flex items-center justify-center gap-3"
             >
-              <span>Book a Free Call</span>
+              <span>Get a Free AI Audit</span>
               <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
             <a

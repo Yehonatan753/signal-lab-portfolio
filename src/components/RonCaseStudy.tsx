@@ -75,7 +75,7 @@ export default function RonCaseStudy() {
           <div className="glass-panel rounded-2xl p-7 border border-white/5">
             <div className="flex items-center gap-2.5 mb-6">
               <span className="size-2.5 rounded-full bg-red-500" />
-              <span className="text-xs font-bold tracking-[2px] uppercase text-red-400">Before — Hitting a Wall</span>
+              <span className="text-xs font-bold tracking-[2px] uppercase text-red-400">Before - Hitting a Wall</span>
             </div>
             <ul className="flex flex-col gap-3">
               {cs.before.map((b, i) => (
@@ -88,7 +88,7 @@ export default function RonCaseStudy() {
           <div className="glass-panel rounded-2xl p-7 border border-signal/20">
             <div className="flex items-center gap-2.5 mb-6">
               <span className="size-2.5 rounded-full bg-signal" />
-              <span className="text-xs font-bold tracking-[2px] uppercase text-signal">After — Fully Custom</span>
+              <span className="text-xs font-bold tracking-[2px] uppercase text-signal">After - Fully Custom</span>
             </div>
             <ul className="flex flex-col gap-3">
               {cs.after.map((a, i) => (

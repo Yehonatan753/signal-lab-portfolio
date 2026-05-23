@@ -5,8 +5,8 @@ import { useLeadPopup } from './LeadCapturePopup';
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 const BULLETS = [
-  'Which AI systems would 10x your specific revenue stream',
-  'Your #1 bottleneck — and the exact fix',
+  'The first system we would build for your specific business',
+  'Your #1 bottleneck and the exact fix',
   'A prioritized build roadmap: what to do first and why',
   'Honest verdict: what we would build if it were our business',
 ];
@@ -36,17 +36,17 @@ export default function AuditCta() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-signal/10 border border-signal/25 mb-5">
               <Zap size={12} className="text-signal fill-signal" />
-              <span className="text-xs font-bold tracking-[2px] uppercase text-signal">Free · Limited Spots</span>
+              <span className="text-xs font-bold tracking-[2px] uppercase text-signal">Free - Limited Spots</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-heading font-black text-white leading-[1.15] tracking-tighter mb-4">
               Get your free{' '}
               <span className="text-glow-animate">AI Growth Audit</span>
-              {' '}— before your competitor does.
+              {' '}- before your competitor does.
             </h2>
 
             <p className="text-text-muted leading-relaxed mb-6">
-              Most agencies send a proposal before they understand your business. We do the homework first — so you get a real plan, not a sales deck. Zero pressure. Zero fluff.
+              Most agencies send a proposal before they understand your business. We do the homework first, so you get a real plan, not a sales deck. Zero pressure. Zero fluff.
             </p>
 
             <motion.button
@@ -94,9 +94,9 @@ export default function AuditCta() {
 
               <div className="mt-6 pt-5 border-t border-white/5">
                 <p className="text-xs text-text-muted/60 italic leading-relaxed">
-                  "He is not just a contractor — he is a partner who delivers real results."
+                  "He understands both the business and the build, and moves fast on work that usually gets dragged out."
                 </p>
-                <p className="text-xs text-signal font-semibold mt-1.5">— Tomer Friedman, Nutritionist</p>
+                <p className="text-xs text-signal font-semibold mt-1.5">- Tomer Friedman, Nutritionist</p>
               </div>
             </div>
           </motion.div>

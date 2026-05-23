@@ -132,7 +132,7 @@ export default function Header() {
               onClick={() => { setMobileOpen(false); openPopup(); }}
               className="mt-4 w-full bg-signal text-white py-4 rounded-2xl font-bold text-center text-xl shadow-[0_10px_40px_rgba(0,180,255,0.3)]"
             >
-              {SITE_DATA.nav.cta} →
+              {SITE_DATA.nav.cta} {'->'}
             </motion.button>
           </motion.div>
         )}

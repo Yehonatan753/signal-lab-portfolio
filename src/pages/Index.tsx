@@ -11,6 +11,7 @@ import PainPoint from '../components/PainPoint';
 import Capabilities from '../components/Capabilities';
 import Services from '../components/Services';
 import Showcase from '../components/Showcase';
+import ProofLedger from '../components/ProofLedger';
 import CaseStudy from '../components/CaseStudy';
 import RonCaseStudy from '../components/RonCaseStudy';
 import Testimonials from '../components/Testimonials';
@@ -84,6 +85,7 @@ export default function Index() {
           <Capabilities />
           <Services />
           <Showcase />
+          <ProofLedger />
           <CaseStudy />
           <RonCaseStudy />
           <Testimonials />
