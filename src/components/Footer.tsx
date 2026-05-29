@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { SITE_DATA } from '../data';
 
 export default function Footer() {
@@ -15,7 +16,31 @@ export default function Footer() {
           Copyright 2026 Signal Lab. All rights reserved.
         </p>
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5">
+          <Link
+            to="/privacy"
+            className="text-sm text-text-muted hover:text-signal transition-colors font-medium"
+          >
+            Privacy
+          </Link>
+          <Link
+            to="/terms"
+            className="text-sm text-text-muted hover:text-signal transition-colors font-medium"
+          >
+            Terms
+          </Link>
+          <Link
+            to="/copyright"
+            className="text-sm text-text-muted hover:text-signal transition-colors font-medium"
+          >
+            Copyright
+          </Link>
+          <Link
+            to="/data-processing"
+            className="text-sm text-text-muted hover:text-signal transition-colors font-medium"
+          >
+            Data
+          </Link>
           <a
             href={SITE_DATA.personal.site}
             target="_blank"

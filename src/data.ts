@@ -551,7 +551,7 @@ export const SITE_DATA = {
     namePlaceholder: 'Your name',
     emailPlaceholder: 'your@email.com',
     businessPlaceholder: 'Your website or business (optional)',
-    disclaimer: 'Delivered to your inbox within 48h. Zero spam. Zero pitch.',
+    disclaimer: 'Delivered within 48h. No spam. You can ask us to delete your inquiry data.',
     successTitle: 'You are in.',
     successSub: 'Check your inbox in the next 48 hours. We will send you a personalized breakdown built specifically for your business.',
     // Popup triggers

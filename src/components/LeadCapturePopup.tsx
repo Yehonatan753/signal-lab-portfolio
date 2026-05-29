@@ -13,6 +13,7 @@ export default function LeadCapturePopup() {
   const [open, setOpen] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', business: '' });
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [state, setState] = useState<FormState>('idle');
 
   const trigger = useCallback(() => {
@@ -79,6 +80,7 @@ export default function LeadCapturePopup() {
         `Name: ${form.name}`,
         `Email: ${form.email}`,
         form.business ? `Business: ${form.business}` : '',
+        'Privacy consent: accepted on form submission',
       ].filter(Boolean).join('\n');
       const mailto = `mailto:${SITE_DATA.personal.email}?subject=${encodeURIComponent(SITE_DATA.personal.emailSubject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
@@ -178,9 +180,25 @@ export default function LeadCapturePopup() {
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-text-muted/50 text-sm focus:outline-none focus:border-signal/50 transition-colors"
                         />
 
+                        <label className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-xs leading-relaxed text-text-muted">
+                          <input
+                            required
+                            type="checkbox"
+                            checked={privacyAccepted}
+                            onChange={e => setPrivacyAccepted(e.target.checked)}
+                            className="mt-1 size-4 accent-signal"
+                          />
+                          <span>
+                            I agree that Signal Lab may use my details to respond to this audit request, according to the{' '}
+                            <a href="/privacy" className="text-signal hover:underline">Privacy Policy</a>
+                            {' '}and{' '}
+                            <a href="/terms" className="text-signal hover:underline">Terms</a>.
+                          </span>
+                        </label>
+
                         <motion.button
                           type="submit"
-                          disabled={state === 'submitting'}
+                          disabled={state === 'submitting' || !privacyAccepted}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className="w-full btn-magnetic flex items-center justify-center gap-2.5 bg-signal text-white px-6 py-3.5 rounded-xl font-bold text-sm shadow-[0_10px_40px_rgba(0,180,255,0.35)] disabled:opacity-60 mt-1"
